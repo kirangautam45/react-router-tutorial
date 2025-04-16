@@ -29,7 +29,7 @@ function App() {
       <div className='app'>
         <NavBar handleLogout={handleLogout} isAuthenticated={isAuthenticated} />
 
-        <div className='page-container'>
+        <section className='page-container'>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/user/:userId' element={<User />} />
@@ -52,6 +52,7 @@ function App() {
                       textAlign: 'center',
                       display: 'flex',
                       justifyContent: 'center',
+                      fontSize: '16px',
                     }}
                   >
                     Select a category
@@ -64,7 +65,7 @@ function App() {
 
             <Route path='*' element={<NotFound />} />
           </Routes>
-        </div>
+        </section>
       </div>
     </BrowserRouter>
   )

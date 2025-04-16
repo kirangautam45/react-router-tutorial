@@ -1,0 +1,325 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f7fa;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navigation Styles */
+nav.main-nav {
+  background-color: #2c3e50;
+  padding: 1rem 2rem;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav.main-nav .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.nav-links li a.active {
+  background-color: #3498db;
+  color: white;
+}
+
+/* Page Content Styles */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+  flex: 1;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  margin: 1.5rem 0 1rem;
+  color: #2c3e50;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Card Styles */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Form Styles */
+form {
+  margin: 1.5rem 0;
+}
+
+input,
+button {
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+input {
+  border: 1px solid #ddd;
+  margin-right: 0.5rem;
+  width: 300px;
+  max-width: 100%;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Nested Route Styles */
+.sub-nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  background-color: #f8f9fa;
+  padding: 0.75rem;
+  border-radius: 6px;
+}
+
+.sub-nav a {
+  text-decoration: none;
+  color: #3498db;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.sub-nav a:hover {
+  background-color: #ecf0f1;
+}
+
+.sub-nav a.active {
+  background-color: #3498db;
+  color: white;
+}
+
+/* Error Page */
+.error-page {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.error-page h1 {
+  font-size: 3rem;
+  border-bottom: none;
+}
+
+.error-page p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+.error-page a {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.error-page a:hover {
+  background-color: #2980b9;
+}
+
+/* User Profile */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.user-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #3498db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: white;
+}
+
+.user-info {
+  flex: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  nav.main-nav .container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .user-profile {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Add these to your src/index.css file */
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: white;
+  font-weight: bold;
+}
+
+.product-card h3 {
+  padding: 1rem 1rem 0.5rem;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.product-price {
+  padding: 0 1rem;
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 1.1rem;
+  margin: 0.25rem 0;
+}
+
+.product-desc {
+  padding: 0 1rem;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  height: 60px;
+  overflow: hidden;
+}
+
+.btn-add-cart {
+  margin: 0.5rem 1rem 1rem;
+  width: calc(100% - 2rem);
+  padding: 0.5rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-add-cart:hover {
+  background-color: #2980b9;
+}
+
+/* Nested Routes Specific Styling */
+.nested-content {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}

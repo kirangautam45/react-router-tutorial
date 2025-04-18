@@ -9,39 +9,25 @@ const NavBar = ({ handleLogout, isAuthenticated }) => {
           React Router Tutorial
         </Link>
         <ul className='nav-links'>
-          <li>
-            <NavLink to='/'>Home</NavLink>
-          </li>
+          <NavLink to='/'>Home</NavLink>
 
-          <li>
-            <NavLink to='/products'>Products</NavLink>
-          </li>
-          <li>
-            <NavLink to='/user/123'>User Profile</NavLink>
-          </li>
-          <li>
-            <NavLink to='/search'>Search</NavLink>
-          </li>
+          <NavLink to='/products'>Products</NavLink>
+          <NavLink to='/user/123'>User Profile</NavLink>
+          <NavLink to='/search'>Search</NavLink>
           {isAuthenticated ? (
             <>
-              <li>
-                <NavLink to='/dashboard'>Dashboard</NavLink>
-              </li>
-              <li>
-                <button
-                  onClick={() => {
-                    handleLogout()
-                  }}
-                  style={{ background: 'red' }}
-                >
-                  Logout
-                </button>
-              </li>
+              <NavLink to='/dashboard'>Dashboard</NavLink>
+              <NavLink
+                onClick={() => {
+                  handleLogout()
+                }}
+                style={{ background: 'red' }}
+              >
+                Logout
+              </NavLink>
             </>
           ) : (
-            <li>
-              <NavLink to='/login'>Login</NavLink>
-            </li>
+            <NavLink to='/login'>Login</NavLink>
           )}
         </ul>
       </div>

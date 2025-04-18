@@ -1,4 +1,4 @@
-import { featuredProducts } from '../../data/featuredProducts'
+import { featuredProducts } from '../../data'
 export default function FeaturedProducts() {
   return (
     <div>

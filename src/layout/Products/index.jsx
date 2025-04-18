@@ -3,7 +3,7 @@ import { Outlet, NavLink } from 'react-router-dom'
 
 export default function Products() {
   return (
-    <div>
+    <>
       <h1>Products</h1>
       <div className='card'>
         <p>This section demonstrates nested routes in React Router.</p>
@@ -17,6 +17,6 @@ export default function Products() {
           <Outlet />
         </div>
       </div>
-    </div> 
+    </> 
   )
 }

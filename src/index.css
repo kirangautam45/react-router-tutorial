@@ -48,7 +48,7 @@ nav.main-nav .container {
   gap: 1.5rem;
 }
 
-.nav-links li a {
+.nav-links  a {
   color: #ecf0f1;
   text-decoration: none;
   font-weight: 500;
@@ -57,12 +57,12 @@ nav.main-nav .container {
   transition: all 0.3s ease;
 }
 
-.nav-links li a:hover {
+.nav-links  a:hover {
   background-color: rgba(255, 255, 255, 0.1);
   color: #fff;
 }
 
-.nav-links li a.active {
+.nav-links  a.active {
   background-color: #3498db;
   color: white;
 }

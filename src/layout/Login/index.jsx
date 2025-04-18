@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
+// onLogin is props. which we are getting from parent function or components
+
 export default function Login({ onLogin }) {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -10,6 +12,7 @@ export default function Login({ onLogin }) {
     e.preventDefault()
     // Simulate login
     if (username && password) {
+      localStorage.setItem('username', username)
       onLogin()
       navigate('/dashboard')
     }

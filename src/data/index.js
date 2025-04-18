@@ -93,3 +93,11 @@ export const newProducts = [
     color: '#2980b9',
   },
 ]
+
+export const reactRouterconcept = [
+  ' Basic routing',
+  'URL parameters',
+  ' Nested routes',
+  'Protected routes',
+  'Query parameters',
+]

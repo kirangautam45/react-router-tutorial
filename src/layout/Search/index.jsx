@@ -13,7 +13,7 @@ export default function Search() {
   return (
     <div>
       <h1>Search</h1>
-      <div className='card'>
+      <section className='card'>
         <p>This component demonstrates working with query parameters.</p>
         <form onSubmit={handleSearch}>
           <input
@@ -30,7 +30,7 @@ export default function Search() {
             <p>Displaying search results for "{query}"...</p>
           </div>
         )}
-      </div>
+      </section>
     </div>
   )
 }

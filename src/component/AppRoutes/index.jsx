@@ -10,6 +10,7 @@ import NotFound from '../../layout/NotFound'
 import FeaturedProducts from '../../layout/FeaturedProducts'
 import NewProducts from '../../layout/NewProducts'
 import ProtectedRoute from '../ProtectedRoute'
+import Signup from '../../layout/Signup'
 
 export const AppRoutes = ({ isAuthenticated, handleLogin }) => {
   return (
@@ -18,6 +19,7 @@ export const AppRoutes = ({ isAuthenticated, handleLogin }) => {
       <Route path='/user/:userId' element={<User />} />
       <Route path='/search' element={<Search />} />
       <Route path='/login' element={<Login onLogin={handleLogin} />} />
+      <Route path='/signup' element={<Signup onLogin={handleLogin} />} />
       <Route
         path='/dashboard'
         element={

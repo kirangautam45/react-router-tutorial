@@ -27,7 +27,10 @@ const NavBar = ({ handleLogout, isAuthenticated }) => {
               </NavLink>
             </>
           ) : (
-            <NavLink to='/login'>Login</NavLink>
+            <>
+              <NavLink to='/login'>Login</NavLink>
+              <NavLink to='/signup'> Signup</NavLink>
+            </>
           )}
         </ul>
       </div>
